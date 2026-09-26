@@ -1,4 +1,5 @@
 import { onBoard } from "@/features/auth/action/onboard";
+import { ChatShell } from "@/features/conversation/components/chat-shell";
 import { auth } from "@clerk/nextjs/server";
 
 export default async function RootGroupLayout({
@@ -9,5 +10,5 @@ export default async function RootGroupLayout({
     await auth.protect();
     await onBoard();
 
-    return <div>{children}</div>;
+    return <ChatShell>{children}</ChatShell>;
 }
