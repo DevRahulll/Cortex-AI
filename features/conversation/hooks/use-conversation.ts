@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import {} from "next/navigation";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 import {
@@ -11,7 +11,6 @@ import {
     updateConversation,
 } from "@/features/conversation/actions/conversation-actions";
 import { queryKeys } from "../utils/query-keys";
-import { useRouter } from "next/router";
 
 export function useConversations() {
     return useQuery({

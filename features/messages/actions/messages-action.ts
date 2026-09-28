@@ -92,7 +92,7 @@ export async function updateMessage(messageId:string, content:string) {
     const trimmed=content.trim();
 
     if(!trimmed){
-        throw new Error("Message cannot be empty"):
+        throw new Error("Message cannot be empty");
     }
 
     const existing=await prisma.message.findUnique({
